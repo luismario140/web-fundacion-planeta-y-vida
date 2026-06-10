@@ -9,16 +9,19 @@
   align-items: center;
   background: #25d366;
   border: 2px solid var(--white);
-  border-radius: 999px;
+  border-radius: 50%;
   box-shadow: 0 12px 35px rgba(16, 42, 33, 0.28);
   color: #0b3d21;
   display: flex;
   font-weight: 800;
-  gap: 10px;
-  min-height: 56px;
-  padding: 13px 20px;
+  height: 60px;
+  justify-content: center;
+  overflow: visible;
+  padding: 0;
+  position: relative;
   text-decoration: none;
   transition: background 180ms ease, transform 180ms ease;
+  width: 60px;
 }
 
 .help-chat__trigger:hover {
@@ -28,7 +31,46 @@
 
 .help-chat__trigger svg {
   color: var(--white);
-  font-size: 1.65rem;
+  font-size: 1.85rem;
+}
+
+.help-chat__trigger span {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  bottom: 8px;
+  box-shadow: 0 10px 30px rgba(16, 42, 33, 0.2);
+  color: var(--ink);
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.2;
+  padding: 10px 15px;
+  position: absolute;
+  right: calc(100% + 20px);
+  white-space: nowrap;
+}
+
+.help-chat__trigger span::before,
+.help-chat__trigger span::after {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+}
+
+.help-chat__trigger span::before {
+  bottom: -9px;
+  height: 12px;
+  right: -10px;
+  width: 12px;
+}
+
+.help-chat__trigger span::after {
+  bottom: -15px;
+  height: 7px;
+  right: -18px;
+  width: 7px;
 }
 
 @media (max-width: 620px) {
@@ -38,40 +80,16 @@
   }
 
   .help-chat__trigger {
-    overflow: visible;
-    position: relative;
-    border-radius: 50%;
     height: 58px;
-    justify-content: center;
-    padding: 0;
     width: 58px;
   }
 
   .help-chat__trigger span {
-    background: var(--white);
-    border: 1px solid var(--line);
     border-radius: 14px;
     bottom: 7px;
-    box-shadow: 0 8px 24px rgba(16, 42, 33, 0.18);
-    color: var(--ink);
-    display: block;
     font-size: 0.82rem;
-    line-height: 1.2;
     padding: 9px 12px;
-    position: absolute;
     right: calc(100% + 12px);
-    white-space: nowrap;
-  }
-
-  .help-chat__trigger span::after {
-    border-bottom: 7px solid transparent;
-    border-left: 8px solid var(--white);
-    border-top: 7px solid transparent;
-    content: "";
-    left: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   .help-chat__trigger svg {
