@@ -63,14 +63,14 @@ function Contacto() {
             <span className="eyebrow">Escríbenos</span>
             <h2>Inicia la conversación</h2>
             <p>
-              El canal disponible actualmente es el correo institucional. Al
-              abrirlo podrás completar el asunto y adjuntar documentos.
+              Al continuar se abrirá tu aplicación de correo con la dirección de
+              la Fundación y el asunto preparados para que escribas tu mensaje.
             </p>
             <a
               className="button button--primary"
-              href="mailto:planetayvidaong@gmail.com?subject=Contacto%20desde%20el%20sitio%20web"
+              href="mailto:planetayvidaong@gmail.com?subject=Mensaje%20desde%20el%20sitio%20web&body=Hola%20Fundaci%C3%B3n%20Social%20Integral%20Planeta%20y%20Vida%2C%0A%0AMi%20nombre%20es%3A%20%0AOrganizaci%C3%B3n%20%28si%20aplica%29%3A%20%0AMotivo%20del%20mensaje%3A%20%0A%0AMensaje%3A%20"
             >
-              Abrir correo institucional
+              Enviar correo
             </a>
             <p className="contact-panel__note">
               Para PQRS, incluye “PQRS” al inicio del asunto y tus datos de

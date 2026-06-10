@@ -1,59 +1,29 @@
-import { Link } from "react-router-dom";
 import {
-  FaFileAlt,
-  FaCertificate,
-  FaLandmark,
-  FaShieldAlt,
-  FaComments,
-  FaUserShield,
-  FaEnvelope,
+  FaFilePdf,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
+import usePublishedDocuments from "../hooks/usePublishedDocuments";
+import { getSignedDocumentUrl } from "../lib/documents";
 import heroImage from "../assets/imgbannerN/imagen2.jpg";
 
-const documents = [
-  {
-    icon: FaFileAlt,
-    title: "Existencia y representación legal",
-    status: "Solicitar documento",
-  },
-  {
-    icon: FaCertificate,
-    title: "Reconocimiento institucional",
-    status: "Documento próximamente disponible",
-  },
-  {
-    icon: FaLandmark,
-    title: "Certificación del Ministerio del Interior",
-    status: "Solicitar documento",
-  },
-  {
-    icon: FaShieldAlt,
-    title: "Políticas institucionales",
-    status: "Documento próximamente disponible",
-  },
-  {
-    icon: FaComments,
-    title: "PQRS y canal de solicitudes",
-    status: "Ir al canal de contacto",
-    link: "/contacto?motivo=pqrs",
-  },
-  {
-    icon: FaUserShield,
-    title: "Tratamiento de datos personales",
-    status: "Documento próximamente disponible",
-    id: "datos",
-  },
-  {
-    icon: FaEnvelope,
-    title: "Contacto institucional",
-    status: "Escribir a la Fundación",
-    link: "mailto:planetayvidaong@gmail.com",
-  },
-];
-
 function Transparencia() {
+  const {
+    documents: publishedDocuments,
+    loading,
+    configured,
+  } = usePublishedDocuments();
+
+  const openDocument = async (document) => {
+    try {
+      const signedUrl = await getSignedDocumentUrl(document.file_path);
+      window.open(signedUrl, "_blank", "noopener,noreferrer");
+    } catch {
+      window.alert("No fue posible abrir el documento en este momento.");
+    }
+  };
+
   return (
     <>
       <PageHero
@@ -68,37 +38,50 @@ function Transparencia() {
         <div className="container">
           <SectionHeading
             eyebrow="Información institucional"
-            title="Documentos y canales"
-            text="No publicamos enlaces vacíos. Cuando un documento aún no está alojado en el sitio, puedes solicitarlo directamente al equipo."
+            title="Documentos publicados"
+            text="Consulta la documentación institucional vigente que la Fundación ha dispuesto para acceso público."
           />
-          <div className="document-grid">
-            {documents.map(({ icon: Icon, title, status, link, id }) => (
-              <article className="document-card" key={title} id={id}>
-                <span className="icon-box">
-                  <Icon aria-hidden="true" />
-                </span>
-                <h2>{title}</h2>
-                {link?.startsWith("mailto:") ? (
-                  <a className="text-link" href={link}>{status}</a>
-                ) : link ? (
-                  <Link className="text-link" to={link}>{status}</Link>
-                ) : (
-                  <span className="document-card__status">{status}</span>
-                )}
-              </article>
-            ))}
-          </div>
+          {loading ? (
+            <p className="documents-empty">Cargando documentos...</p>
+          ) : publishedDocuments.length > 0 ? (
+            <div className="document-grid">
+              {publishedDocuments.map((document) => (
+                <article className="document-card" key={document.id}>
+                  <span className="icon-box">
+                    <FaFilePdf aria-hidden="true" />
+                  </span>
+                  <small className="document-card__category">
+                    {document.category}
+                  </small>
+                  <h2>{document.title}</h2>
+                  {document.description && <p>{document.description}</p>}
+                  <button
+                    className="text-link document-card__button"
+                    type="button"
+                    onClick={() => openDocument(document)}
+                  >
+                    Abrir PDF <FaExternalLinkAlt aria-hidden="true" />
+                  </button>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p className="documents-empty">
+              {configured
+                ? "No hay documentos publicados en este momento."
+                : "La consulta documental estará disponible próximamente."}
+            </p>
+          )}
         </div>
       </section>
 
       <section className="section section--soft">
         <div className="container transparency-note">
           <span className="eyebrow">Compromiso institucional</span>
-          <h2>Una sección preparada para crecer</h2>
+          <h2>Información administrada y actualizada</h2>
           <p>
-            La siguiente fase documental deberá incorporar archivos vigentes,
-            fechas de actualización, responsables de publicación y versiones
-            accesibles de cada política o certificado.
+            Los documentos visibles en esta página son publicados directamente
+            desde el área administrativa de la Fundación.
           </p>
         </div>
       </section>

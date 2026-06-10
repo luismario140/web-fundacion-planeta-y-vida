@@ -6,6 +6,7 @@
 }
 
 .help-chat__trigger {
+  animation: whatsapp-bounce 3.6s ease-in-out infinite;
   align-items: center;
   background: #25d366;
   border: 2px solid var(--white);
@@ -25,6 +26,7 @@
 }
 
 .help-chat__trigger:hover {
+  animation-play-state: paused;
   background: #42df7c;
   transform: translateY(-3px);
 }
@@ -76,6 +78,36 @@
   left: 50%;
   transform: translateX(-50%);
   width: 7px;
+}
+
+@keyframes whatsapp-bounce {
+  0%,
+  72%,
+  100% {
+    transform: translateY(0);
+  }
+
+  78% {
+    transform: translateY(-10px);
+  }
+
+  83% {
+    transform: translateY(0);
+  }
+
+  88% {
+    transform: translateY(-5px);
+  }
+
+  93% {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .help-chat__trigger {
+    animation: none;
+  }
 }
 
 @media (max-width: 620px) {

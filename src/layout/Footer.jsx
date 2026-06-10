@@ -31,7 +31,7 @@ function Footer() {
           <Link to="/transparencia">Transparencia</Link>
           <Link to="/vinculate">Vincúlate</Link>
           <Link to="/contacto">PQRS y contacto</Link>
-          <Link to="/transparencia#datos">Tratamiento de datos</Link>
+          <Link to="/transparencia">Documentos institucionales</Link>
         </div>
 
         <div className="footer__column footer__contact">
