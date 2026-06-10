@@ -220,11 +220,11 @@ p {
 }
 
 .home-hero {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   min-height: min(700px, calc(100vh - 88px));
   overflow: hidden;
-  padding: 72px 0 104px;
+  padding: 58px 0 92px;
   position: relative;
 }
 
@@ -253,11 +253,19 @@ p {
 }
 
 .home-hero__foundation {
-  font-size: clamp(1.9rem, 3.45vw, 3.2rem);
+  font-size: clamp(1.75rem, 3.15vw, 2.9rem);
   letter-spacing: -0.055em;
   line-height: 1.08;
-  margin-bottom: 22px;
+  margin-bottom: 32px;
   max-width: 760px;
+}
+
+.home-hero__foundation span {
+  display: block;
+}
+
+.home-hero__foundation span:last-child {
+  padding-left: clamp(24px, 5vw, 72px);
 }
 
 .home-hero__tagline {
@@ -271,7 +279,7 @@ p {
   gap: 12px;
   letter-spacing: 0.055em;
   line-height: 1.5;
-  margin: 2px 0 30px;
+  margin: 12px 0 42px;
   text-transform: none;
 }
 
@@ -287,7 +295,7 @@ p {
 .home-hero p {
   color: #e3ece7;
   font-size: clamp(0.96rem, 1.3vw, 1.08rem);
-  margin: 0 0 36px;
+  margin: 0 0 54px;
   max-width: 790px;
 }
 
@@ -906,9 +914,9 @@ p {
   }
 
   .home-hero {
-    align-items: center;
+    align-items: flex-start;
     min-height: 560px;
-    padding: 42px 0 70px;
+    padding: 38px 0 64px;
   }
 
   .home-hero__overlay {
@@ -916,16 +924,16 @@ p {
   }
 
   .home-hero__foundation {
-    font-size: clamp(1.55rem, 7.3vw, 1.95rem);
+    font-size: clamp(1.45rem, 6.8vw, 1.8rem);
     letter-spacing: -0.045em;
-    margin-bottom: 18px;
+    margin-bottom: 24px;
     max-width: 92%;
   }
 
   .home-hero__tagline {
     font-size: 0.94rem;
     letter-spacing: 0.035em;
-    margin: 2px 0 26px;
+    margin: 9px 0 32px;
   }
 
   .home-hero__tagline::before,
@@ -937,7 +945,7 @@ p {
     color: #ffffff;
     font-size: 1rem;
     line-height: 1.65;
-    margin: 18px 0 24px;
+    margin: 0 0 38px;
   }
 
   .impact-strip__grid,
@@ -1131,7 +1139,7 @@ p {
   }
 
   .home-hero__foundation {
-    font-size: 1.5rem;
+    font-size: 1.42rem;
   }
 
   .button-group .button {

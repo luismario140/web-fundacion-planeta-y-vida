@@ -22,7 +22,8 @@ function Inicio() {
         <div className="container home-hero__content">
           
           <h2 className="home-hero__foundation">
-            Fundación Social Integral Planeta y Vida
+            <span>Fundación Social Integral</span>
+            <span>Planeta y Vida</span>
           </h2>
 
           <span className="eyebrow eyebrow--light">

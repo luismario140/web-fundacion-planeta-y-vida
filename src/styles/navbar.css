@@ -27,18 +27,21 @@
 }
 
 .navbar__brand-copy {
+  align-items: center;
   display: flex;
   flex-direction: column;
   line-height: 1.15;
+  text-align: center;
 }
 
 .navbar__brand-copy strong {
+  margin-top: 3px;
   font-size: 1rem;
 }
 
 .navbar__brand-copy small {
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.76rem;
 }
 
 .navbar__menu {
