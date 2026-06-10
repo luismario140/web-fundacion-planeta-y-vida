@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
+import heroImage from "../assets/imgbannerN/imagen2.jpg";
 
 const documents = [
   {
@@ -59,6 +60,8 @@ function Transparencia() {
         eyebrow="Transparencia"
         title="Confianza que se construye con información clara"
         text="Este espacio reúne la documentación institucional, las políticas y los canales de atención de la Fundación. Los archivos se publicarán aquí a medida que estén disponibles."
+        image={heroImage}
+        imageAlt="Río y bosque que representan el compromiso con el territorio"
       />
 
       <section className="section">

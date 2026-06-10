@@ -5,6 +5,7 @@ import {
   FaClock,
 } from "react-icons/fa";
 import PageHero from "../components/PageHero";
+import heroImage from "../assets/imgbannerN/imagen4.jpg";
 
 function Contacto() {
   return (
@@ -13,6 +14,8 @@ function Contacto() {
         eyebrow="Contacto"
         title="Conversemos sobre territorio, cooperación e impacto"
         text="Escríbenos para presentar una iniciativa, solicitar información institucional, proponer una alianza o activar una ruta de vinculación."
+        image={heroImage}
+        imageAlt="Paisaje territorial de Antioquia"
       />
 
       <section className="section">
