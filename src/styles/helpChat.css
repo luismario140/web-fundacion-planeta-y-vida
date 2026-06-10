@@ -1,0 +1,55 @@
+.help-chat {
+  bottom: 22px;
+  position: fixed;
+  right: 22px;
+  z-index: 120;
+}
+
+.help-chat__trigger {
+  align-items: center;
+  background: #25d366;
+  border: 2px solid var(--white);
+  border-radius: 999px;
+  box-shadow: 0 12px 35px rgba(16, 42, 33, 0.28);
+  color: #0b3d21;
+  display: flex;
+  font-weight: 800;
+  gap: 10px;
+  min-height: 56px;
+  padding: 13px 20px;
+  text-decoration: none;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.help-chat__trigger:hover {
+  background: #42df7c;
+  transform: translateY(-3px);
+}
+
+.help-chat__trigger svg {
+  color: var(--white);
+  font-size: 1.65rem;
+}
+
+@media (max-width: 620px) {
+  .help-chat {
+    bottom: 14px;
+    right: 14px;
+  }
+
+  .help-chat__trigger {
+    border-radius: 50%;
+    height: 58px;
+    justify-content: center;
+    padding: 0;
+    width: 58px;
+  }
+
+  .help-chat__trigger span {
+    display: none;
+  }
+
+  .help-chat__trigger svg {
+    font-size: 1.8rem;
+  }
+}

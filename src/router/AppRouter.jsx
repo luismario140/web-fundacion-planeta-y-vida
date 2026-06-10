@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import HelpChat from "../components/HelpChat";
 
 import Inicio from "../pages/Inicio";
 import Nosotros from "../pages/Nosotros";
@@ -33,6 +34,7 @@ function AppRouter() {
         </Routes>
       </main>
 
+      <HelpChat />
       <Footer />
     </BrowserRouter>
   );
