@@ -109,8 +109,8 @@ export const involvementOptions = [
     icon: FaBriefcase,
     title: "Trabaja con nosotros",
     text: "Consulta oportunidades para vincularte a procesos sociales, ambientales, productivos, técnicos y administrativos.",
-    action: "Enviar hoja de vida",
-    href: "mailto:planetayvidaong@gmail.com?subject=Hoja%20de%20vida",
+    action: "Registrarme",
+    href: "/contacto?motivo=registro-laboral",
   },
   {
     icon: FaHandshake,
