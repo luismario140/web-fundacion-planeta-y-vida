@@ -38,7 +38,7 @@
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 18px;
-  bottom: 8px;
+  bottom: calc(100% + 18px);
   box-shadow: 0 10px 30px rgba(16, 42, 33, 0.2);
   color: var(--ink);
   display: block;
@@ -46,7 +46,7 @@
   line-height: 1.2;
   padding: 10px 15px;
   position: absolute;
-  right: calc(100% + 20px);
+  right: 0;
   white-space: nowrap;
 }
 
@@ -60,16 +60,16 @@
 }
 
 .help-chat__trigger span::before {
-  bottom: -9px;
+  bottom: -11px;
   height: 12px;
-  right: -10px;
+  right: 18px;
   width: 12px;
 }
 
 .help-chat__trigger span::after {
-  bottom: -15px;
+  bottom: -21px;
   height: 7px;
-  right: -18px;
+  right: 10px;
   width: 7px;
 }
 
@@ -86,10 +86,10 @@
 
   .help-chat__trigger span {
     border-radius: 14px;
-    bottom: 7px;
+    bottom: calc(100% + 16px);
     font-size: 0.82rem;
     padding: 9px 12px;
-    right: calc(100% + 12px);
+    right: 0;
   }
 
   .help-chat__trigger svg {
