@@ -28,7 +28,9 @@ function Inicio() {
           <span className="eyebrow eyebrow--light">
             Plataforma territorial de operación social, ambiental y productiva
           </span>
-          <h1>Transformamos territorios, cuidamos la vida.</h1>
+          <span className="home-hero__tagline">
+            Transformamos territorios, cuidamos la vida
+          </span>
           <p>
             En la Fundación Social Integral Planeta y Vida articulamos desarrollo
             social, bioeconomía comunitaria, cultura, ambiente e innovación

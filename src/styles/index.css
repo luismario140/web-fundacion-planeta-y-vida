@@ -253,24 +253,28 @@ p {
 }
 
 .home-hero__foundation {
-  font-size: clamp(2.7rem, 5vw, 4.8rem);
+  font-size: clamp(2.45rem, 4.5vw, 4.25rem);
   letter-spacing: -0.055em;
   line-height: 1.04;
   margin-bottom: 24px;
   max-width: 900px;
 }
 
-.home-hero h1 {
-  font-size: clamp(1.45rem, 2.4vw, 2.2rem);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  max-width: 720px;
+.home-hero__tagline {
+  color: #a9dbaa;
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  margin: 3px 0 22px;
+  text-transform: uppercase;
 }
 
 .home-hero p {
   color: #e3ece7;
   font-size: clamp(0.96rem, 1.3vw, 1.08rem);
-  margin: 24px 0 34px;
+  margin: 0 0 34px;
   max-width: 790px;
 }
 
@@ -898,16 +902,15 @@ p {
     background: rgba(8, 31, 23, 0.86);
   }
 
-  .home-hero h1 {
-    font-size: clamp(1.25rem, 5.8vw, 1.55rem);
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-  }
-
   .home-hero__foundation {
-    font-size: clamp(2rem, 10vw, 2.65rem);
+    font-size: clamp(1.85rem, 9vw, 2.4rem);
     letter-spacing: -0.045em;
     margin-bottom: 18px;
+  }
+
+  .home-hero__tagline {
+    font-size: 0.75rem;
+    margin: 2px 0 18px;
   }
 
   .home-hero p {
@@ -1103,17 +1106,12 @@ p {
     min-height: 530px;
   }
 
-  .home-hero h1,
   .page-hero h1 {
     font-size: 1.8rem;
   }
 
-  .home-hero h1 {
-    font-size: 1.25rem;
-  }
-
   .home-hero__foundation {
-    font-size: 1.95rem;
+    font-size: 1.8rem;
   }
 
   .button-group .button {
