@@ -38,6 +38,8 @@
   }
 
   .help-chat__trigger {
+    overflow: visible;
+    position: relative;
     border-radius: 50%;
     height: 58px;
     justify-content: center;
@@ -46,7 +48,30 @@
   }
 
   .help-chat__trigger span {
-    display: none;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    bottom: 7px;
+    box-shadow: 0 8px 24px rgba(16, 42, 33, 0.18);
+    color: var(--ink);
+    display: block;
+    font-size: 0.82rem;
+    line-height: 1.2;
+    padding: 9px 12px;
+    position: absolute;
+    right: calc(100% + 12px);
+    white-space: nowrap;
+  }
+
+  .help-chat__trigger span::after {
+    border-bottom: 7px solid transparent;
+    border-left: 8px solid var(--white);
+    border-top: 7px solid transparent;
+    content: "";
+    left: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .help-chat__trigger svg {

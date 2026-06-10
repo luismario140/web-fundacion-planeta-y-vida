@@ -15,7 +15,7 @@ function HelpChat() {
         aria-label="Hablar con la Fundación por WhatsApp"
       >
         <FaWhatsapp aria-hidden="true" />
-        <span>¿Necesitas ayuda?</span>
+        <span>Canal de Atención</span>
       </a>
     </aside>
   );
