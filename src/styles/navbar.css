@@ -21,9 +21,9 @@
 }
 
 .navbar__logo {
-  height: 60px;
+  height: 69px;
   object-fit: contain;
-  width: 58px;
+  width: 67px;
 }
 
 .navbar__brand-copy {
@@ -122,8 +122,8 @@
   }
 
   .navbar__logo {
-    height: 45px;
-    width: 44px;
+    height: 52px;
+    width: 51px;
   }
 
   .navbar__menu {

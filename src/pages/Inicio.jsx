@@ -21,14 +21,14 @@ function Inicio() {
         <div className="home-hero__overlay" />
         <div className="container home-hero__content">
           
-          <h2>Fundación Social Integral Planeta y Vida</h2>
+          <h2 className="home-hero__foundation">
+            Fundación Social Integral Planeta y Vida
+          </h2>
 
           <span className="eyebrow eyebrow--light">
             Plataforma territorial de operación social, ambiental y productiva
           </span>
-          <h1>
-            Transformamos territorios, cuidamos la vida.
-          </h1>
+          <h1>Transformamos territorios, cuidamos la vida.</h1>
           <p>
             En la Fundación Social Integral Planeta y Vida articulamos desarrollo
             social, bioeconomía comunitaria, cultura, ambiente e innovación
