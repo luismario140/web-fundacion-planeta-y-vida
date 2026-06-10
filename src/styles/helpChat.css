@@ -1,7 +1,7 @@
 .help-chat {
-  bottom: 32px;
+  bottom: 42px;
   position: fixed;
-  right: 36px;
+  right: 48px;
   z-index: 120;
 }
 
@@ -80,8 +80,8 @@
 
 @media (max-width: 620px) {
   .help-chat {
-    bottom: 24px;
-    right: 24px;
+    bottom: 32px;
+    right: 32px;
   }
 
   .help-chat__trigger {

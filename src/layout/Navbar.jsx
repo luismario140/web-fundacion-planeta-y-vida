@@ -30,8 +30,8 @@ function Navbar() {
             className="navbar__logo"
           />
           <span className="navbar__brand-copy">
-            <small>Fundación Social Integral</small>
             <strong>Planeta y Vida</strong>
+            <small>Fundación Social Integral</small>
           </span>
         </Link>
 

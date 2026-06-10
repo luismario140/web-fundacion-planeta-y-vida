@@ -254,7 +254,6 @@ p {
 }
 
 .home-hero__foundation {
-  font-size: clamp(1.75rem, 3.15vw, 2.9rem);
   letter-spacing: -0.055em;
   line-height: 1.08;
   margin-inline: auto;
@@ -266,8 +265,15 @@ p {
   display: block;
 }
 
-.home-hero__foundation span:last-child {
-  padding-left: 0;
+.home-hero__name {
+  font-size: clamp(1.9rem, 3.45vw, 3.15rem);
+}
+
+.home-hero__institution {
+  font-size: clamp(1rem, 1.65vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  margin-top: 8px;
 }
 
 .home-hero__tagline {
@@ -927,10 +933,18 @@ p {
   }
 
   .home-hero__foundation {
-    font-size: clamp(1.45rem, 6.8vw, 1.8rem);
     letter-spacing: -0.045em;
     margin-bottom: 24px;
     max-width: 92%;
+  }
+
+  .home-hero__name {
+    font-size: clamp(1.55rem, 7.3vw, 1.95rem);
+  }
+
+  .home-hero__institution {
+    font-size: 0.92rem;
+    margin-top: 7px;
   }
 
   .home-hero__tagline {
@@ -1129,8 +1143,15 @@ p {
 }
 
 .home-hero .button-group {
+  gap: clamp(20px, 3vw, 42px);
   justify-content: center;
   text-align: center;
+}
+
+@media (max-width: 760px) {
+  .home-hero .button-group {
+    gap: 14px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -1146,8 +1167,8 @@ p {
     font-size: 1.8rem;
   }
 
-  .home-hero__foundation {
-    font-size: 1.42rem;
+  .home-hero__name {
+    font-size: 1.52rem;
   }
 
   .button-group .button {
