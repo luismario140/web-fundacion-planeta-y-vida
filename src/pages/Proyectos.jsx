@@ -14,6 +14,7 @@ function Proyectos() {
         text="Nuestro portafolio conecta protección social, bioeconomía, ambiente, cultura y liderazgo. Cada iniciativa puede ajustarse al contexto, alcance y esquema de alianza."
         image={heroImage}
         imageAlt="Ecosistema de bosque y agua"
+        settingKey="proyectos_hero"
       />
 
       <section className="section">

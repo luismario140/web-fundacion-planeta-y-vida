@@ -16,6 +16,7 @@ function Contacto() {
         text="Escríbenos para presentar una iniciativa, solicitar información institucional, proponer una alianza o activar una ruta de vinculación."
         image={heroImage}
         imageAlt="Paisaje territorial de Antioquia"
+        settingKey="contacto_hero"
       />
 
       <section className="section">

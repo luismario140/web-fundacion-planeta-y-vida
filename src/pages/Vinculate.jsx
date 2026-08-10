@@ -13,6 +13,7 @@ function Vinculate() {
         text="Personas, organizaciones, empresas e instituciones pueden sumar recursos, conocimiento, tiempo y redes para ampliar el impacto en comunidades y territorios."
         image={heroImage}
         imageAlt="Comunidad participando en una actividad colectiva"
+        settingKey="vinculate_hero"
       />
 
       <section className="section">

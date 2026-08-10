@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Navigate, Routes, Route, useLocation } from "react-router-dom";
 
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
@@ -6,6 +6,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import HelpChat from "../components/HelpChat";
 import ProtectedRoute from "../components/ProtectedRoute";
 import AuthProvider from "../context/AuthProvider";
+import SiteSettingsProvider from "../context/SiteSettingsProvider";
 
 import Inicio from "../pages/Inicio";
 import Nosotros from "../pages/Nosotros";
@@ -18,12 +19,14 @@ import Vinculate from "../pages/Vinculate";
 import AdminLogin from "../pages/admin/AdminLogin";
 import AdminDocuments from "../pages/admin/AdminDocuments";
 
-function AppRouter() {
+function AppShell() {
+  const { pathname } = useLocation();
+  const isAdminRoute = pathname.startsWith("/admin");
+
   return (
-    <BrowserRouter>
-      <AuthProvider>
+    <SiteSettingsProvider>
         <ScrollToTop />
-        <Navbar />
+        {!isAdminRoute && <Navbar />}
 
         <main>
           <Routes>
@@ -36,6 +39,7 @@ function AppRouter() {
             <Route path="/transparencia" element={<Transparencia />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/vinculate" element={<Vinculate />} />
+            <Route path="/admin" element={<Navigate to="/admin/documentos" replace />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route
               path="/admin/documentos"
@@ -48,8 +52,17 @@ function AppRouter() {
           </Routes>
         </main>
 
-        <HelpChat />
-        <Footer />
+        {!isAdminRoute && <HelpChat />}
+        {!isAdminRoute && <Footer />}
+    </SiteSettingsProvider>
+  );
+}
+
+function AppRouter() {
+  return (
+    <BrowserRouter>
+      <AuthProvider>
+        <AppShell />
       </AuthProvider>
     </BrowserRouter>
   );

@@ -39,6 +39,7 @@ function Territorios() {
         text="Nuestra acción prioriza territorios urbanos, rurales, costeros, anfibios y comunitarios, con especial atención a comunidades afrodescendientes, rurales y poblaciones con retos sociales, ambientales y económicos."
         image={heroImage}
         imageAlt="Río entre bosques tropicales"
+        settingKey="territorios_hero"
       />
 
       <section className="section">

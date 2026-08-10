@@ -8,14 +8,17 @@ import {
 } from "../data/institutionalData";
 import heroImage from "../assets/imgbannerN/imagen3.jpg";
 import territoryImage from "../assets/imgbannerN/imagen2.jpg";
+import useSiteSettings from "../hooks/useSiteSettings";
 
 function Inicio() {
+  const { assets } = useSiteSettings();
+
   return (
     <>
       <section className="home-hero">
         <img
           className="home-hero__image"
-          src={heroImage}
+          src={assets.home_hero || heroImage}
           alt="Actividad comunitaria con niñas, niños y jóvenes"
         />
         <div className="home-hero__overlay" />

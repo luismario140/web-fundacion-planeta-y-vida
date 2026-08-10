@@ -13,6 +13,7 @@ function Servicios() {
         text="No ofrecemos acciones aisladas: estructuramos rutas de trabajo que combinan conocimiento técnico, participación comunitaria, gestión territorial y articulación interinstitucional."
         image={heroImage}
         imageAlt="Jornada comunitaria con niñas, niños y jóvenes"
+        settingKey="servicios_hero"
       />
 
       <section className="section">

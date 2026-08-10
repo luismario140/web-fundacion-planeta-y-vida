@@ -14,6 +14,7 @@ function Nosotros() {
         text="Somos una organización social con enfoque territorial, diferencial y afrodescendiente, orientada a diseñar, estructurar y operar procesos sociales, ambientales y productivos que conectan a comunidades, instituciones y aliados para generar impacto real."
         image={heroImage}
         imageAlt="Paisaje rural de Antioquia"
+        settingKey="nosotros_hero"
       />
 
       <section className="section">

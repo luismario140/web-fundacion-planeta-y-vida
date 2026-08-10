@@ -32,6 +32,7 @@ function Transparencia() {
         text="Este espacio reúne la documentación institucional, las políticas y los canales de atención de la Fundación. Los archivos se publicarán aquí a medida que estén disponibles."
         image={heroImage}
         imageAlt="Río y bosque que representan el compromiso con el territorio"
+        settingKey="transparencia_hero"
       />
 
       <section className="section">

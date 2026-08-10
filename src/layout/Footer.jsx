@@ -2,13 +2,16 @@ import { Link } from "react-router-dom";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import "../styles/footer.css";
 import logo from "../assets/logo.png";
+import useSiteSettings from "../hooks/useSiteSettings";
 
 function Footer() {
+  const { assets } = useSiteSettings();
+
   return (
     <footer className="footer">
       <div className="container footer__grid">
         <div className="footer__brand">
-          <img src={logo} alt="" className="footer__logo" />
+          <img src={assets.site_logo || logo} alt="" className="footer__logo" />
           <div>
             <h2>Fundación Social Integral Planeta y Vida</h2>
             <p>

@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/navbar.css";
 import logo from "../assets/logo.png";
+import useSiteSettings from "../hooks/useSiteSettings";
 
 const links = [
   { to: "/", label: "Inicio" },
@@ -17,6 +18,7 @@ const links = [
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useLocation();
+  const { assets } = useSiteSettings();
 
   const closeMenu = () => setIsOpen(false);
 
@@ -25,7 +27,7 @@ function Navbar() {
       <div className="container navbar__inner">
         <Link className="navbar__brand" to="/" onClick={closeMenu}>
           <img
-            src={logo}
+            src={assets.site_logo || logo}
             alt="Fundación Social Integral Planeta y Vida"
             className="navbar__logo"
           />
